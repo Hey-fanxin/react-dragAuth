@@ -1,0 +1,177 @@
+.App {
+    width: 100% ;
+    height: 250px;
+    .top{
+        display: none;
+        position: relative;
+        width: 320px;
+        height: 144px;
+        margin: auto;
+        overflow: hidden;
+        .dragImg{
+            width: 100%;
+            height: 100%;
+            pointer-events: auto;
+            img{
+                width: 100%;
+                height: 100%;
+                pointer-events: auto;
+                vertical-align: top;
+            }
+        }
+        .dragBtn{
+            position: absolute;
+            left: 0;
+            top:0;
+            width: 40px;
+            height: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+                pointer-events: auto;
+                vertical-align: top;
+            }
+        }
+        
+    }
+    .switchBox{
+        position: relative;
+        width: 320px;
+        height: 40px;
+        margin: 20px auto;
+        border: 1px solid #e4e7eb;
+        border-radius: 3px;
+        background-color: #f7f9fa;
+        .bg{
+            width: 100%;
+            height: 100%;
+            color: #333;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            p{
+                margin: 0 auto;
+                letter-spacing:3px;
+            }
+        }
+        .btn{
+            position: absolute;
+            left: 0;
+            top:0;
+            width: 40px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            box-shadow: 0 0 3px rgba(0,0,0,.3);
+            cursor: pointer;
+            transition: background .2s linear;
+            border-radius: 3px;
+            &:hover{
+                background: #1991fa;
+                p{
+                    background-image: url(http://cstaticdun.126.net//2.10.1/images/icon_light.f0aea65.png);
+                    background-position: 0 0;
+                    background-size: 34px 494px;
+                }
+            }
+            p{
+                width: 14px;
+                height: 10px;
+                margin: 0 auto;
+                color: red;
+                background:url("http://cstaticdun.126.net//2.10.1/images/icon_light.f0aea65.png") no-repeat;
+                background-position: 0 -13px;
+                background-size: 34px 494px;
+            }
+        }
+        .btn-left{
+            position: absolute;
+            left:-1px;
+            top:-1px;
+            width:0px;
+            height: 40px;
+            border-radius: 3px;
+            border:1px solid transparent;
+        }
+    }
+    .switchBox.moveing{
+        .btn{
+            background: #1991fa;
+            p{
+                background-image: url(http://cstaticdun.126.net//2.10.1/images/icon_light.f0aea65.png);
+                background-position: 0 0;
+                background-size: 34px 494px;
+            }
+        }
+        .btn-left{
+            border-color: #1991fa;
+            background: #d1e9fe;
+        }
+    }
+    .switchBox.error{
+        .btn{
+            background-color: #f57a7a;
+            p{
+                background-image: url(http://cstaticdun.126.net//2.10.1/images/icon_light.f0aea65.png);
+                background-position: 0 -68px;
+                background-size: 34px 494px;
+            }
+        }
+        .btn-left{
+            border-color: #f57a7a;
+            background-color: #fce1e1;
+        }
+    }
+    .switchBox.success{
+        .btn{
+            background-color: #52ccba;
+            p{
+                background-image: url(http://cstaticdun.126.net//2.10.1/images/icon_light.f0aea65.png);
+                background-position: 0 -26px;
+                background-size: 34px 494px;
+            }
+        }
+        .btn-left{
+            border-color: #52ccba;
+            background-color: #d2f4ef;
+        }
+    }
+    .loading-box{
+        display: none;
+        width: 320px;
+        height: 144px;
+        padding-top:45px;
+        margin: auto;
+        overflow: hidden;
+        box-sizing: border-box;
+        
+        .loading{
+            width:24px;
+            height:24px;
+            margin: 0 auto;
+            margin-bottom:5px;
+            img{
+                vertical-align: top;
+                width: 100%;
+            }
+        }
+        p{
+            font-size: 14px;    
+            color: #45494c;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+}
+.App.showImg{
+    .top{
+        display: block;
+    }
+}
+.App.showLoading{
+    .loading-box{
+        display: block;
+    }
+}
+   
